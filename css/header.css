@@ -1,0 +1,28 @@
+
+.container{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ width: 1300px;
+ height: 6rem;
+ background-color: royalblue;
+ padding: 0 2rem;
+}
+
+.navbar{
+display:flex;
+list-style: none;
+width: 22rem; 
+justify-content: space-between;
+}
+.navbar li a{
+text-decoration: none;
+color: #000;
+font-size: 1.4rem;
+}
+
+.cartIcon{
+    margin: 2rem;
+    font-size: 1.4rem;
+
+}
