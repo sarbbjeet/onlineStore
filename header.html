@@ -1,16 +1,53 @@
 
 <div class="container">
+    <script>
+    const clickfun = ()=>{
+        console.log("button is pressed");
+    }
+
+    </script>
+
 <link rel="stylesheet" href="./css/header.css" />
 <div class="logo">
-    <h1>Online Shop</h1>
+    <div style="font-size: 1.5rem; font-weight: bold;">Online Shop</div>
+
 </div>
 <ul class="navbar">
     <li> <a href="">Home</a></li>
     <li> <a href="">Products</a></li>
     <li> <a href="">Account</a></li>
     <li> <a href="">Contact</a></li>
+ 
 </ul>
+<div style="display: flex; align-items: center; ">
 <div class="cartIcon">
     <i class="fas fa-cart-plus"></i>
+</div>
+<div class="menu-icon"  onclick="(()=> { var cName= document.getElementsByTagName('ul')[0].className;
+    if(cName.split(' ').length>1){
+        document.getElementsByTagName('ul')[0].classList.remove('navbar-active');
+       
+    }
+    else{
+        document.getElementsByTagName('ul')[0].classList.add('navbar-active');
+        // console.log(document.getElementsByTagName('ul')[0].classList);
+        
+    }   
+ 
+    var icon= document.getElementsByTagName('i')[1].className;
+    if(icon == 'fas fa-align-justify'){
+       
+        console.log(document.getElementsByTagName('i')[1].classList);
+        document.getElementsByTagName('i')[1].classList.remove('fa-align-justify');
+        document.getElementsByTagName('i')[1].classList.add('fa-times');
+     }
+    else{
+         document.getElementsByTagName('i')[1].classList.remove('fa-times');
+         document.getElementsByTagName('i')[1].classList.add('fa-align-justify');
+    }
+    
+        })()"  > 
+    <i class="fas fa-align-justify"></i>
+</div>
 </div>
 </div>

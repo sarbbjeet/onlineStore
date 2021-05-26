@@ -1,28 +1,107 @@
-
+.main-tag{
+    height: 5rem;
+     background-color:  rgba(0, 128, 128, 0.7);
+     box-shadow: 3px 4px 6px rgba(0,0,0,0.2);
+}
 .container{
+ position: relative;
  display: flex;
  align-items: center;
  justify-content: space-between;
  width: 1300px;
- height: 6rem;
- background-color: royalblue;
+
+ color: whitesmoke;
+ 
+z-index: 50;
  padding: 0 2rem;
+
 }
 
 .navbar{
 display:flex;
 list-style: none;
-width: 22rem; 
+width: 27rem; 
 justify-content: space-between;
 }
 .navbar li a{
+
 text-decoration: none;
-color: #000;
+color:whitesmoke;
 font-size: 1.4rem;
+position: relative;
+}
+.navbar li a::before{
+content: "";
+position: absolute;
+left: 0;
+top: 100%;
+width: 0;
+height: 2px;
+transition: all 0.5s linear;
+background-color: whitesmoke;
+}
+
+.navbar a:hover::before{
+    width: 100%;
+    transition: all 0.5s linear;
+    background-color: black;
+    cursor: pointer;
 }
 
 .cartIcon{
     margin: 2rem;
     font-size: 1.4rem;
+    
+}
+.menu-icon{
+    font-size: 1.4rem;
+    display: none;
 
 }
+
+@media(max-width: 730px) {
+   *{
+   font-size: 85%;
+   }
+}
+@media(max-width: 620px) {
+  
+*{
+    font-size: 85%;
+}
+
+.menu-icon{
+    font-size: 1.5rem;
+    padding-left: 2rem;
+    display: block;
+
+}
+  .navbar{
+      display: block;
+      position: absolute;
+      text-align: start;
+      top: 5rem;
+      width: 50%;
+      height: 100vh;
+      left: -60%;  
+      background-color: rgba(0,128,128,0.5);
+      z-index: 100;
+      transition: all 0.5s  linear;
+      box-shadow: 5px 7px 10px rgba(0,0,0,0.5);
+
+  } 
+  .navbar li{
+      padding: 2rem;
+    
+      width: 100%;
+      border: 1px solid rgba(0,0,0,0.2);
+  }
+
+  .navbar-active{
+      left: 0;
+      transition: all 0.5s linear;
+  }
+    
+}
+
+ 
