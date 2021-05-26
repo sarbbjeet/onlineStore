@@ -1,2 +1,2 @@
 # onlineStore
-online store to buy stuff
+navbar and hamburger menu is created using html,css and javascript.  
